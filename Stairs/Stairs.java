@@ -29,7 +29,7 @@ package Stairs;
           return 1;
         }
         else{    
-          u = getStairs2(n-1) + getStairs(n-2);
+          u = getStairs2(n-1) + getStairs2(n-2);
         }
         return u;
         }
