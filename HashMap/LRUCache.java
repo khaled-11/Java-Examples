@@ -43,6 +43,7 @@ public class LRUCache {
             if (dq.size() == csize) { 
                 int last = dq.removeLast(); 
                 map.remove(last); 
+                map.remove(last);
             } 
         } 
         else { 
@@ -57,6 +58,7 @@ public class LRUCache {
                 i++; 
             } 
             dq.remove(index-1); 
+            map.remove(x);
         } 
         dq.push(x); 
         map.add(x); 
