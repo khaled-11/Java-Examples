@@ -17,7 +17,7 @@ public static void main(String[] args) throws Exception{
   String[] sentences = new String [4];
 
     sentences[0] = " This is my FIrST capital Test";
-    sentences[1] = "try second here";
+    sentences[1] = "try second fiRst here";
     sentences[2] = "First talk to first";
     sentences[3] = "only third with first";
   
