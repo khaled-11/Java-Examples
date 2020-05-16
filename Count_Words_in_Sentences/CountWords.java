@@ -5,7 +5,10 @@ public class CountWords {
 public static void main(String[] args) throws Exception{
   HashMap<String, Integer> map = new HashMap<>();
   String[] words = {"first" , "second" , "third" , "fourth"}; 
-  String[] sentences = {"here is my first First sentense First to test." , "First here is the third to count" , "here First is nothing" , " consider edge case  with double space then select first.", "second was not included" , "  why don't wecount all words as  well"};
+  String[] sentences = new String [3];
+  sentences[0] = " First First one try";
+    sentences[1] = " second first one first try";
+      sentences[2] = " First one try";
   String test = "THJhhjfHyyI";
   String lower1 = lower(test);
   System.out.println(lower1);
@@ -13,8 +16,9 @@ public static void main(String[] args) throws Exception{
   {
     int c = 0;
     for (int i = 0 ; i < sentences.length ; ++i) {
-      String lower = lower(words[j]);
-      if (sentences[i].contains(words[j]) || sentences[i].contains(lower)) {
+      String lower = lower(sentences[i]);
+      //  System.out.println(sentences(i));
+      if ( sentences[i].contains(words[j]) || lower.contains(words[j])) {
         //System.out.println(words[j]  + "Found");
         ++c;
         map.put(words[j],c);
@@ -47,7 +51,4 @@ public static String lower(String str){
   }
   return lower;
 }
-
-
-
 }
