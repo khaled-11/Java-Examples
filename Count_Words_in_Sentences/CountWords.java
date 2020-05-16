@@ -4,14 +4,23 @@ import java.util.*;
 public class CountWords {
 public static void main(String[] args) throws Exception{
   HashMap<String, Integer> map = new HashMap<>();
-  String[] words = {"first" , "second" , "third" , "fourth"}; 
-  String[] sentences = new String [3];
-  sentences[0] = " First First one try";
-    sentences[1] = " second first one first try";
-      sentences[2] = " First one try";
-  String test = "THJhhjfHyyI";
-  String lower1 = lower(test);
-  System.out.println(lower1);
+  Scanner s = new Scanner(System.in); 
+  Scanner input = new Scanner(System.in);
+  System.out.println("Please enter the total number of words");
+  int n = input.nextInt();
+  String[] words = new String [n];
+  for (int k =0 ; k < n ;++k){
+    System.out.println("Please enter the words");
+    words[k] = lower(input.next());
+  }
+
+  String[] sentences = new String [4];
+
+    sentences[0] = " This is my FIrST capital Test";
+    sentences[1] = "try second here";
+    sentences[2] = "First talk to first";
+    sentences[3] = "only third with first";
+  
   for (int j = 0 ; j < words.length ; ++j)
   {
     int c = 0;
@@ -27,8 +36,6 @@ public static void main(String[] args) throws Exception{
     for (int o = 0 ; o < words.length ; ++o){
          if (map.containsKey(words[o])) {
          System.out.println("The String " + words[o] + " was found " + map.get(words[o]) + " times");
-         //System.out.println(map.get(words[o]));
-         //System.out.println(map.get(words[o]));
        }
     }}
 
