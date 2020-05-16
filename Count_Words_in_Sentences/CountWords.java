@@ -6,6 +6,9 @@ public static void main(String[] args) throws Exception{
   HashMap<String, Integer> map = new HashMap<>();
   String[] words = {"first" , "second" , "third" , "fourth"}; 
   String[] sentences = {"here is my first sentense First to test." , "here is the third to count" , "here is nothing" , " consider edge case  with double space then select first.", "second was not included" , "  why don't wecount all words as  well"};
+  String test = "THJI";
+  String lower = lower(test);
+  System.out.println(lower);
   for (int j = 0 ; j < words.length ; ++j)
   {
     int c = 0;
@@ -22,4 +25,20 @@ public static void main(String[] args) throws Exception{
          //System.out.println(map.get(words[o]));
          //System.out.println(map.get(words[o]));
        }
-    }}}
+    }}
+
+public static String lower(String str){
+  char current;
+  String lower ="";
+  int tmp;
+  for ( int k = 0 ; k < str.length() ; ++k){
+    current = str.charAt(k);
+    tmp = (int) current;
+    tmp += 32;
+    current = (char) tmp;
+    lower += current;
+  }
+  return lower;
+}
+
+}
